@@ -1,4 +1,4 @@
-# brawler
+# Brawler
 A 2D multiplayer fighting game made with unity  
 
 
