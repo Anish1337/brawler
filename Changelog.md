@@ -10,5 +10,5 @@
 
 # 1/8/2021
 - Added jumpng/falling animations and functionality
-- Added title screen
+- Added title screen with play and quit button functionality
 - Learned about making health bars
