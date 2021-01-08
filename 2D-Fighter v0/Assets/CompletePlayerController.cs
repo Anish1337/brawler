@@ -36,7 +36,22 @@ public class CompletePlayerController : MonoBehaviour
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movement * speed);
 
-        if(moveHorizontal == 0)
+        if(rb2d.velocity.y > 0){
+            anim.SetBool("IsJumping", true);
+            anim.SetBool("IsFalling", false);
+        }
+        if (rb2d.velocity.y < 0)
+        {
+            anim.SetBool("IsFalling", true);
+            anim.SetBool("IsJumping", false);
+        }
+        if (rb2d.velocity.y < .0001 && rb2d.velocity.y > -.0001)
+        {
+            anim.SetBool("IsFalling", false);
+            anim.SetBool("IsJumping", false);
+        }
+
+        if (moveHorizontal == 0)
         {
             anim.SetBool("IsRunning", false);
         } 
