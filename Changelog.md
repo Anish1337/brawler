@@ -8,3 +8,7 @@
 - Added animations for running 
 - Added flipping direction functionality
 
+# 1/8/2021
+- Added jumpng/falling animations and functionality
+- Added title screen
+- Learned about making health bars
