@@ -68,5 +68,11 @@ public class CompletePlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.J)) {
+            
+            anim.SetBool("IsLattacking",true);
+            
+        }
     }
 }
