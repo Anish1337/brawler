@@ -12,3 +12,8 @@
 - Added jumpng/falling animations and functionality
 - Added title screen with play and quit button functionality
 - Learned about making health bars
+
+# 1/21/2021  
+- Beagn creating the attacking animation transitions and code
+- Looked into ways to reduce the jumpforce
+- Reviewed how to use unity and create animations
