@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 150924812}
   - component: {fileID: 150924811}
   - component: {fileID: 150924810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earth 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 1088501227}
   - component: {fileID: 1088501226}
   - component: {fileID: 1088501225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earth 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 1294485395}
   - component: {fileID: 1294485394}
   - component: {fileID: 1294485393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earth 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 1507188342}
   - component: {fileID: 1507188341}
   - component: {fileID: 1507188340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earth 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.49, y: -3.56, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1921002350}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -892,6 +893,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 5
+  groundCheck: {fileID: 1921002350}
+  checkRadius: 0.05
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  extraJumps: 0
 --- !u!50 &1527483104
 Rigidbody2D:
   serializedVersion: 4
@@ -939,6 +946,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.55}
   m_EdgeRadius: 0
+--- !u!1 &1921002349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921002350}
+  m_Layer: 0
+  m_Name: Ground Check
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921002350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921002349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.225, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1527483102}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1956789200
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +987,7 @@ GameObject:
   - component: {fileID: 1956789203}
   - component: {fileID: 1956789202}
   - component: {fileID: 1956789201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: earth 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
