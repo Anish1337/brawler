@@ -77,12 +77,34 @@ public class CompletePlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J)) {
             
             anim.SetBool("IsLattacking",true);
-            
-        }
-    }
+           
 
+
+            }
+
+
+     
+
+
+
+
+
+
+    }
+    bool AnimatorIsPlaying()
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).length >
+               anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
+    }
     void Update()
     {
+
+
+
         if (isGrounded == true)
         {
             extraJumps = 2;
